@@ -1,0 +1,92 @@
+﻿@model IEnumerable<EntityLayer.project>
+
+@{
+    ViewBag.Title = "ListProjects";
+}
+
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li>
+            @Html.ActionLink("New Project", "CreateNewProject", "ProjectList")
+        </li>
+    </ul>
+</div>
+<h2>Projects</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creator_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creator_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creation_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.est_doc_ori)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.est_doc_cur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actual_doc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.progress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creator_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creator_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creation_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.est_doc_ori)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.est_doc_cur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actual_doc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.progress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditProject", new { item.pid }) |
+                @Html.ActionLink("Details", "DisplayProject", "Project", new { item.pid  },null) @*|*@
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.pid })*@
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+    <div>
+        <label>
+            @ViewBag.user
+        </label>
+    </div>

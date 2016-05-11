@@ -1,0 +1,629 @@
+2016-04-11 18:02:07,808 [9] FATAL ListProjects - This is a fatal error
+2016-04-11 18:02:07,976 [9] ERROR ListProjects - This is an error
+2016-04-11 18:02:08,121 [9] WARN  ListProjects - This is a warning
+2016-04-11 18:02:08,259 [9] DEBUG ListProjects - This is a debug message
+2016-04-11 18:02:08,406 [9] INFO  ListProjects - This is an info message
+2016-04-11 18:02:08,546 [9] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-11 18:02:08,700 [9] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-11 18:03:12,080 [6] FATAL ListProjects - This is a fatal error
+2016-04-11 18:03:12,090 [6] ERROR ListProjects - This is an error
+2016-04-11 18:03:12,090 [6] WARN  ListProjects - This is a warning
+2016-04-11 18:03:12,091 [6] DEBUG ListProjects - This is a debug message
+2016-04-11 18:03:12,091 [6] INFO  ListProjects - This is an info message
+2016-04-11 18:03:12,091 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-11 18:03:12,094 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-11 18:07:37,395 [6] FATAL ListProjects - This is a fatal error
+2016-04-11 18:07:37,407 [6] ERROR ListProjects - This is an error
+2016-04-11 18:07:37,407 [6] WARN  ListProjects - This is a warning
+2016-04-11 18:07:37,407 [6] DEBUG ListProjects - This is a debug message
+2016-04-11 18:07:37,407 [6] INFO  ListProjects - This is an info message
+2016-04-11 18:07:37,407 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-11 18:07:37,410 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-13 11:59:53,576 [6] FATAL ListProjects - This is a fatal error
+2016-04-13 11:59:53,710 [6] ERROR ListProjects - This is an error
+2016-04-13 11:59:53,710 [6] WARN  ListProjects - This is a warning
+2016-04-13 11:59:53,711 [6] DEBUG ListProjects - This is a debug message
+2016-04-13 11:59:53,711 [6] INFO  ListProjects - This is an info message
+2016-04-13 11:59:53,711 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-13 11:59:53,713 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-13 12:06:01,851 [7] FATAL ListProjects - This is a fatal error
+2016-04-13 12:06:01,861 [7] ERROR ListProjects - This is an error
+2016-04-13 12:06:01,861 [7] WARN  ListProjects - This is a warning
+2016-04-13 12:06:01,861 [7] DEBUG ListProjects - This is a debug message
+2016-04-13 12:06:01,862 [7] INFO  ListProjects - This is an info message
+2016-04-13 12:06:01,862 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-13 12:06:01,864 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 11:33:41,892 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 11:33:41,922 [7] ERROR ListProjects - This is an error
+2016-04-15 11:33:41,922 [7] WARN  ListProjects - This is a warning
+2016-04-15 11:33:41,923 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 11:33:41,923 [7] INFO  ListProjects - This is an info message
+2016-04-15 11:33:41,923 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 11:33:41,926 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 11:33:58,114 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 11:33:58,115 [6] ERROR ListProjects - This is an error
+2016-04-15 11:33:58,115 [6] WARN  ListProjects - This is a warning
+2016-04-15 11:33:58,115 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 11:33:58,115 [6] INFO  ListProjects - This is an info message
+2016-04-15 11:33:58,115 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 11:33:58,115 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 11:41:08,933 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 11:41:08,943 [8] ERROR ListProjects - This is an error
+2016-04-15 11:41:08,943 [8] WARN  ListProjects - This is a warning
+2016-04-15 11:41:08,943 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 11:41:08,943 [8] INFO  ListProjects - This is an info message
+2016-04-15 11:41:08,943 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 11:41:08,946 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 11:41:30,080 [5] FATAL ListProjects - This is a fatal error
+2016-04-15 11:41:30,080 [5] ERROR ListProjects - This is an error
+2016-04-15 11:41:30,080 [5] WARN  ListProjects - This is a warning
+2016-04-15 11:41:30,080 [5] DEBUG ListProjects - This is a debug message
+2016-04-15 11:41:30,080 [5] INFO  ListProjects - This is an info message
+2016-04-15 11:41:30,080 [5] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 11:41:30,080 [5] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:18:58,250 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:18:58,262 [6] ERROR ListProjects - This is an error
+2016-04-15 13:18:58,262 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:18:58,263 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:18:58,263 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:18:58,263 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:18:58,266 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:19:25,839 [5] FATAL ListProjects - This is a fatal error
+2016-04-15 13:19:25,850 [5] ERROR ListProjects - This is an error
+2016-04-15 13:19:25,850 [5] WARN  ListProjects - This is a warning
+2016-04-15 13:19:25,850 [5] DEBUG ListProjects - This is a debug message
+2016-04-15 13:19:25,851 [5] INFO  ListProjects - This is an info message
+2016-04-15 13:19:25,851 [5] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:19:25,855 [5] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:20:14,482 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:20:14,482 [6] ERROR ListProjects - This is an error
+2016-04-15 13:20:14,483 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:20:14,483 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:20:14,483 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:20:14,483 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:20:14,483 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:22:54,670 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:22:54,679 [6] ERROR ListProjects - This is an error
+2016-04-15 13:22:54,679 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:22:54,680 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:22:54,680 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:22:54,680 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:22:54,683 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:23:05,754 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:23:05,754 [7] ERROR ListProjects - This is an error
+2016-04-15 13:23:05,754 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:23:05,754 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:23:05,754 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:23:05,754 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:23:05,754 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:23:14,666 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:23:14,666 [6] ERROR ListProjects - This is an error
+2016-04-15 13:23:14,666 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:23:14,666 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:23:14,666 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:23:14,666 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:23:14,666 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:23:57,546 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:23:57,558 [6] ERROR ListProjects - This is an error
+2016-04-15 13:23:57,558 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:23:57,559 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:23:57,559 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:23:57,559 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:23:57,563 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:24:46,307 [5] FATAL ListProjects - This is a fatal error
+2016-04-15 13:24:46,317 [5] ERROR ListProjects - This is an error
+2016-04-15 13:24:46,317 [5] WARN  ListProjects - This is a warning
+2016-04-15 13:24:46,317 [5] DEBUG ListProjects - This is a debug message
+2016-04-15 13:24:46,317 [5] INFO  ListProjects - This is an info message
+2016-04-15 13:24:46,317 [5] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:24:46,320 [5] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:27:17,755 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:27:17,764 [6] ERROR ListProjects - This is an error
+2016-04-15 13:27:17,764 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:27:17,764 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:27:17,764 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:27:17,765 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:27:17,767 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:27:18,828 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:27:18,828 [8] ERROR ListProjects - This is an error
+2016-04-15 13:27:18,829 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:27:18,829 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:27:18,829 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:27:18,829 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:27:18,829 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:27:20,039 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:27:20,039 [7] ERROR ListProjects - This is an error
+2016-04-15 13:27:20,039 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:27:20,040 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:27:20,040 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:27:20,040 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:27:20,040 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:29:27,872 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:29:27,883 [6] ERROR ListProjects - This is an error
+2016-04-15 13:29:27,883 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:29:27,884 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:29:27,884 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:29:27,884 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:29:27,886 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:41,064 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:41,064 [6] ERROR ListProjects - This is an error
+2016-04-15 13:31:41,064 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:31:41,064 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:41,064 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:31:41,064 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:41,064 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:54,635 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:54,635 [8] ERROR ListProjects - This is an error
+2016-04-15 13:31:54,635 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:31:54,635 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:54,635 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:31:54,635 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:54,635 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:55,348 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:55,348 [8] ERROR ListProjects - This is an error
+2016-04-15 13:31:55,348 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:31:55,348 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:55,348 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:31:55,348 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:55,348 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:55,948 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:55,948 [7] ERROR ListProjects - This is an error
+2016-04-15 13:31:55,948 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:31:55,948 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:55,948 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:31:55,948 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:55,948 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:56,494 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:56,494 [7] ERROR ListProjects - This is an error
+2016-04-15 13:31:56,494 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:31:56,494 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:56,494 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:31:56,494 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:56,494 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:57,216 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:57,216 [7] ERROR ListProjects - This is an error
+2016-04-15 13:31:57,216 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:31:57,216 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:57,216 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:31:57,216 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:57,216 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:57,754 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:57,754 [7] ERROR ListProjects - This is an error
+2016-04-15 13:31:57,754 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:31:57,754 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:57,754 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:31:57,754 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:57,754 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:58,343 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:58,343 [6] ERROR ListProjects - This is an error
+2016-04-15 13:31:58,343 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:31:58,343 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:58,343 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:31:58,343 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:58,343 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:58,975 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:58,975 [7] ERROR ListProjects - This is an error
+2016-04-15 13:31:58,975 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:31:58,975 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:58,975 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:31:58,975 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:58,975 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:31:59,648 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:31:59,648 [6] ERROR ListProjects - This is an error
+2016-04-15 13:31:59,648 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:31:59,648 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:31:59,648 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:31:59,648 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:31:59,648 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:00,360 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:00,360 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:00,360 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:00,360 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:00,360 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:00,360 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:00,360 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:01,389 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:01,389 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:01,389 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:01,389 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:01,389 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:01,389 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:01,389 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:02,203 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:02,203 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:02,203 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:02,203 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:02,203 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:02,204 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:02,204 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:02,539 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:02,539 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:02,539 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:02,539 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:02,539 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:02,539 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:02,540 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:02,903 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:02,903 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:02,903 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:02,903 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:02,903 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:02,904 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:02,904 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:03,295 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:03,295 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:03,295 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:03,295 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:03,295 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:03,295 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:03,295 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:03,649 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:03,649 [8] ERROR ListProjects - This is an error
+2016-04-15 13:32:03,649 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:32:03,649 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:03,649 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:32:03,649 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:03,649 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:03,912 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:03,912 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:03,912 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:03,912 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:03,912 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:03,912 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:03,912 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:05,145 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:05,145 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:05,145 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:05,145 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:05,145 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:05,145 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:05,145 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:05,452 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:05,452 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:05,452 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:05,452 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:05,452 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:05,452 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:05,452 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:05,755 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:05,755 [8] ERROR ListProjects - This is an error
+2016-04-15 13:32:05,755 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:32:05,755 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:05,755 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:32:05,755 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:05,755 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:06,073 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:06,073 [8] ERROR ListProjects - This is an error
+2016-04-15 13:32:06,074 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:32:06,074 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:06,074 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:32:06,074 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:06,074 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:06,355 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:06,355 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:06,355 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:06,355 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:06,355 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:06,355 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:06,355 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:06,527 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:06,527 [8] ERROR ListProjects - This is an error
+2016-04-15 13:32:06,527 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:32:06,527 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:06,527 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:32:06,527 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:06,527 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:06,821 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:06,821 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:06,821 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:06,821 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:06,821 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:06,821 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:06,821 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:07,119 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:07,119 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:07,119 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:07,119 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:07,119 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:07,119 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:07,119 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:07,446 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:07,446 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:07,446 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:07,446 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:07,446 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:07,446 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:07,446 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:07,762 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:07,762 [6] ERROR ListProjects - This is an error
+2016-04-15 13:32:07,762 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:32:07,763 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:07,763 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:32:07,763 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:07,763 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:08,066 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:08,066 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:08,066 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:08,066 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:08,066 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:08,066 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:08,066 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:08,395 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:08,395 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:08,395 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:08,395 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:08,395 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:08,395 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:08,395 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:08,696 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:08,696 [8] ERROR ListProjects - This is an error
+2016-04-15 13:32:08,696 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:32:08,696 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:08,696 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:32:08,696 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:08,696 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:32:23,826 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:32:23,836 [7] ERROR ListProjects - This is an error
+2016-04-15 13:32:23,836 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:32:23,836 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:32:23,837 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:32:23,837 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:32:23,839 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:00,690 [8] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:00,702 [8] ERROR ListProjects - This is an error
+2016-04-15 13:44:00,702 [8] WARN  ListProjects - This is a warning
+2016-04-15 13:44:00,703 [8] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:00,703 [8] INFO  ListProjects - This is an info message
+2016-04-15 13:44:00,703 [8] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:00,706 [8] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:07,268 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:07,268 [6] ERROR ListProjects - This is an error
+2016-04-15 13:44:07,268 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:44:07,268 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:07,268 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:44:07,268 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:07,268 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:08,084 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:08,084 [7] ERROR ListProjects - This is an error
+2016-04-15 13:44:08,084 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:44:08,084 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:08,084 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:44:08,084 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:08,084 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:08,680 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:08,680 [6] ERROR ListProjects - This is an error
+2016-04-15 13:44:08,680 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:44:08,680 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:08,680 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:44:08,680 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:08,680 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:10,528 [10] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:10,528 [10] ERROR ListProjects - This is an error
+2016-04-15 13:44:10,528 [10] WARN  ListProjects - This is a warning
+2016-04-15 13:44:10,528 [10] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:10,528 [10] INFO  ListProjects - This is an info message
+2016-04-15 13:44:10,528 [10] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:10,528 [10] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:13,189 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:13,189 [7] ERROR ListProjects - This is an error
+2016-04-15 13:44:13,189 [7] WARN  ListProjects - This is a warning
+2016-04-15 13:44:13,189 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:13,189 [7] INFO  ListProjects - This is an info message
+2016-04-15 13:44:13,189 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:13,190 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:27,756 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:27,756 [6] ERROR ListProjects - This is an error
+2016-04-15 13:44:27,756 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:44:27,756 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:27,756 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:44:27,756 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:27,756 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 13:44:38,078 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 13:44:38,078 [6] ERROR ListProjects - This is an error
+2016-04-15 13:44:38,078 [6] WARN  ListProjects - This is a warning
+2016-04-15 13:44:38,078 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 13:44:38,078 [6] INFO  ListProjects - This is an info message
+2016-04-15 13:44:38,078 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 13:44:38,078 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:15:20,360 [10] FATAL ListProjects - This is a fatal error
+2016-04-15 14:15:20,375 [10] ERROR ListProjects - This is an error
+2016-04-15 14:15:20,375 [10] WARN  ListProjects - This is a warning
+2016-04-15 14:15:20,376 [10] DEBUG ListProjects - This is a debug message
+2016-04-15 14:15:20,376 [10] INFO  ListProjects - This is an info message
+2016-04-15 14:15:20,376 [10] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:15:20,381 [10] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:16:32,672 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:16:32,681 [6] ERROR ListProjects - This is an error
+2016-04-15 14:16:32,681 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:16:32,681 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:16:32,682 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:16:32,682 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:16:32,684 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:16:43,556 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:16:43,556 [6] ERROR ListProjects - This is an error
+2016-04-15 14:16:43,556 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:16:43,556 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:16:43,556 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:16:43,556 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:16:43,556 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:19:33,302 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:19:33,312 [6] ERROR ListProjects - This is an error
+2016-04-15 14:19:33,312 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:19:33,313 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:19:33,313 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:19:33,313 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:19:33,315 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:19:41,190 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:19:41,190 [6] ERROR ListProjects - This is an error
+2016-04-15 14:19:41,190 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:19:41,190 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:19:41,190 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:19:41,190 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:19:41,190 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:19:52,082 [7] FATAL ListProjects - This is a fatal error
+2016-04-15 14:19:52,082 [7] ERROR ListProjects - This is an error
+2016-04-15 14:19:52,082 [7] WARN  ListProjects - This is a warning
+2016-04-15 14:19:52,082 [7] DEBUG ListProjects - This is a debug message
+2016-04-15 14:19:52,082 [7] INFO  ListProjects - This is an info message
+2016-04-15 14:19:52,082 [7] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:19:52,082 [7] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:26:51,560 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:26:51,570 [6] ERROR ListProjects - This is an error
+2016-04-15 14:26:51,570 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:26:51,571 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:26:51,571 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:26:51,571 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:26:51,574 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-04-15 14:27:30,360 [6] FATAL ListProjects - This is a fatal error
+2016-04-15 14:27:30,360 [6] ERROR ListProjects - This is an error
+2016-04-15 14:27:30,360 [6] WARN  ListProjects - This is a warning
+2016-04-15 14:27:30,360 [6] DEBUG ListProjects - This is a debug message
+2016-04-15 14:27:30,360 [6] INFO  ListProjects - This is an info message
+2016-04-15 14:27:30,360 [6] FATAL ListProjects - This is a fatal w/ exception
+System.Exception: some fatal ex
+2016-04-15 14:27:30,360 [6] ERROR ListProjects - This is an error w/ exception
+System.Exception: some exception
+2016-05-06 17:52:42,542 [9] INFO  Login - vvghadge@syr.edu Logged in
+2016-05-06 17:52:51,586 [13] FATAL DisplayProject - Hack Attempt at Editing projects byvvghadge@syr.edu
+2016-05-06 17:56:46,114 [25] INFO  Login - vvghadge@syr.edu Logged in
+2016-05-06 17:57:45,415 [8] FATAL DisplayProject - Hack Attempt at Editing projects byvvghadge@syr.edu
+2016-05-06 17:58:30,898 [7] INFO  Login - admin@syr.edu Logged in
+2016-05-06 17:58:48,353 [24] FATAL DisplayProject - Hack Attempt at Editing projects byadmin@syr.edu
+2016-05-06 17:59:25,479 [22] INFO  Login - admin@syr.edu Logged in
+2016-05-06 17:59:56,822 [17] FATAL DisplayProject - Hack Attempt at Editing projects byadmin@syr.edu

@@ -1,0 +1,89 @@
+﻿@model EntityLayer.step
+@{
+    ViewBag.Title = "EditStep";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqueryUi")
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+         $('input[type=datetime]').datepicker({
+             dateFormat: "mm/dd/yy",
+             changeMonth: true,
+             changeYear: true,
+             yearRange: "-0:+25"
+         });
+
+     });
+    </script>
+}
+
+<div>
+    @using (Html.BeginForm("Editor", "Project"))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Edit step for @Model.name</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.name, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.name, new { @class = "form-control", placeholder = "Step Name" })
+                @Html.ValidationMessageFor(m => m.name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.est_start_date, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.est_start_date, new { htmlAttributes = new { @class = "form-control ", placeholder = "Estimated Start Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.est_start_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.est_end_date, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.est_end_date, new { htmlAttributes = new { @class = "form-control ", placeholder = "Estimated Start Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.est_end_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.actual_start_date, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.actual_start_date, new { htmlAttributes = new { @class = "form-control ", placeholder = "Actual Start Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.actual_start_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.actual_end_date, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.actual_end_date, new { htmlAttributes = new { @class = "form-control ", placeholder = "Actual End Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.actual_end_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.step_status, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                Planned:    @Html.RadioButtonFor(m => m.step_status, "Planned", new { htmlAttributes = new { @class = "form-control" } }) |
+                In Process: @Html.RadioButtonFor(m => m.step_status, "In-process", new { htmlAttributes = new { @class = "form-control" } }) |
+                Blocked:    @Html.RadioButtonFor(m => m.step_status, "Blocked", new { htmlAttributes = new { @class = "form-control" } }) |
+                Completed:  @Html.RadioButtonFor(m => m.step_status, "Completed", new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+    <input type="hidden" name="StepId" value="@Model.sid">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Edit" />
+            </div>
+        </div>
+    }
+    </div>

@@ -1,0 +1,42 @@
+﻿@model EntityLayer.step
+
+@{
+    ViewBag.Title = "ChangeStatus";
+}
+
+<h2>Change Status for @Model.name</h2>
+
+<div>
+    @using (Html.BeginForm("ChangingStatus", "Project"))
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <div>
+            @Html.LabelFor(m => m.step_status)
+            <div>
+                Planned:    @Html.RadioButtonFor(m => m.step_status, "Planned", new { htmlAttributes = new { @class = "form-control" } }) |
+                In Process: @Html.RadioButtonFor(m => m.step_status, "In-process", new { htmlAttributes = new { @class = "form-control" } }) |
+                Blocked:    @Html.RadioButtonFor(m => m.step_status, "Blocked", new { htmlAttributes = new { @class = "form-control" } }) |
+                Completed:  @Html.RadioButtonFor(m => m.step_status, "Completed", new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+        </div>
+
+        <div >
+            @Html.Label("Justification")
+            <div>
+                @Html.TextBox("Justify","Justification")
+                @ViewBag.Error
+            </div>
+        </div>
+        <input type="hidden" name="StepId" value="@Model.sid">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Change Status" />
+            </div>
+        </div>
+    }
+</div>

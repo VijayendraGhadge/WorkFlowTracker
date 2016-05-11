@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "ShowStep";
+}
+
+<h2>Project : @ViewBag.ProjectName       Step: @Model.Step.name</h2>
+
+@if (Request.IsAuthenticated)
+{
+    @model WorkFlowTracker.Models.StepAndComments
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>
+                @Html.ActionLink("Change Status", "ChangeStatus", "Project",new { Model.Step.sid},null)
+            </li>
+            <li>
+                @Html.ActionLink("Add Comment", "AddComment", "Project",new { Model.Step.sid},null)
+            </li>
+            <li>
+                @Html.ActionLink("History Report", "StepHistory", "Project", new { Model.Step.sid }, null)
+            </li>
+        </ul>
+        <input type="hidden" name="StepId" value="@Model.Step.sid">
+        <input type="hidden" name="ProjectName" value="@ViewBag.ProjectName">
+    </div>
+
+    <div>
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Step.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.name)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Step.step_status)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.step_status)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Step.est_start_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.est_start_date)
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    @Html.LabelFor(m => m.Step.est_end_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.est_end_date.Date)
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    @Html.LabelFor(m => m.Step.actual_start_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.actual_start_date)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Step.actual_end_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => m.Step.actual_end_date)
+                </td>
+            </tr>
+            </table>
+    </div>
+
+    <div>
+
+ 
+        <table class="table">
+@foreach (var item in Model.Comments)
+{
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => item.text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => item.uid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => item.timestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => item.isfile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => item.fpath)
+        </th>
+      
+        <th></th>
+    </tr>
+    break;
+}
+
+@foreach (var item in Model.Comments) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.uid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timestamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isfile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fpath)
+        </td>
+        @*<td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.cid })
+        </td>*@
+    </tr>
+}
+
+</table>
+
+    </div>
+        @*@Html.ActionLink(item.StepName + "  " + item.Status, "ShowStep", "Project", new { item.StepName, item.ProjectName }, null)*@
+
+
+}
+
+

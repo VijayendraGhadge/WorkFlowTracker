@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "CalenderView";
+}
+
+@section Scripts {
+    
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fullcalendarcss")
+    @Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/fullcalendarjs")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var events = [];
+            $('#calendar').fullCalendar({
+                events: function (start, end, timezone, callback) {
+                    $.ajax({
+                        url: source,
+                        type: 'POST',
+                        data: {},
+                        success: function (doc) {
+                            events.push(doc);
+                            callback(events);
+                        }
+                    });
+                }
+
+            });
+        });
+    </script>
+}
+
+<h2>CalenderView</h2>
+
+<div id="calendar">
+    
+</div>

@@ -1,0 +1,77 @@
+﻿@model WorkFlowTracker.Models.CreateNewStepModels
+@{
+    ViewBag.Title = "CreateStep";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqueryUi")
+
+    <script type="text/javascript">
+
+     $(document).ready(function () {
+         $('input[type=datetime]').datepicker({
+             dateFormat: "mm/dd/yy",
+             changeMonth: true,
+             changeYear: true,
+             yearRange: "-0:+25"
+         });
+
+     });
+    </script>
+}
+
+<div>
+    @using (Html.BeginForm("Generate", "Project"))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create new step for @ViewBag.ProjectName</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.StepName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.StepName, new { @class = "form-control", placeholder = "Step Name" })
+                @Html.ValidationMessageFor(m => m.StepName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.EstStartDate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EstStartDate, new { htmlAttributes = new { @class = "form-control ", placeholder = "Estimated Start Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.EstStartDate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.EstEndDate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EstEndDate, new { htmlAttributes = new { @class = "form-control ", placeholder = "Estimated Start Date", @readonly = "true" } })
+                @Html.ValidationMessageFor(m => m.EstEndDate)
+            </div>
+        </div>
+
+        <input type="hidden" name="ProjectName" value="@ViewBag.ProjectName">
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                Planned:    @Html.RadioButtonFor(m=>m.Status, "Planned")
+                In Process: @Html.RadioButtonFor(m => m.Status, "In-process")
+                Blocked:    @Html.RadioButtonFor(m => m.Status, "Blocked")
+                Completed:  @Html.RadioButtonFor(m => m.Status, "Completed")
+
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Create" />
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="vvghadgeDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="access">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comments">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="int" Nullable="false" />
+          <Property Name="text" Type="text" Nullable="false" />
+          <Property Name="timestamp" Type="datetime" Nullable="false" />
+          <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="file" Type="bit" />
+          <Property Name="fpath" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="justification">
+          <Key>
+            <PropertyRef Name="jid" />
+          </Key>
+          <Property Name="jid" Type="int" Nullable="false" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="text_old" Type="text" />
+          <Property Name="text_new" Type="text" />
+        </EntityType>
+        <EntityType Name="project">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="creator_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="creation_time" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="est_doc_ori" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="est_doc_cur" Type="datetime2" Precision="7" />
+          <Property Name="actual_doc" Type="datetime2" Precision="7" />
+          <Property Name="progress" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="project_steps">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="sid" Type="int" Nullable="false" />
+          <Property Name="pid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="step_comments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="sid" Type="int" Nullable="false" />
+          <Property Name="cid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="step_justification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="sid" Type="int" Nullable="false" />
+          <Property Name="jid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="steps">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" Nullable="false" />
+          <Property Name="step_status" Type="bit" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="level" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="lld" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_access_ToTable_pid">
+          <End Role="project" Type="Self.project" Multiplicity="1" />
+          <End Role="access" Type="Self.access" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="pid" />
+            </Principal>
+            <Dependent Role="access">
+              <PropertyRef Name="pid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_access_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="access" Type="Self.access" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="access">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_comments_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comments" Type="Self.comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_justification_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="justification" Type="Self.justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="justification">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_project_steps_ToTable_pid">
+          <End Role="project" Type="Self.project" Multiplicity="1" />
+          <End Role="project_steps" Type="Self.project_steps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="pid" />
+            </Principal>
+            <Dependent Role="project_steps">
+              <PropertyRef Name="pid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_comments_ToTable_cid">
+          <End Role="comments" Type="Self.comments" Multiplicity="1" />
+          <End Role="step_comments" Type="Self.step_comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comments">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="step_comments">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_comments_ToTable_sid">
+          <End Role="steps" Type="Self.steps" Multiplicity="1" />
+          <End Role="step_comments" Type="Self.step_comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="step_comments">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_justification_ToTable_jid">
+          <End Role="justification" Type="Self.justification" Multiplicity="1" />
+          <End Role="step_justification" Type="Self.step_justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="justification">
+              <PropertyRef Name="jid" />
+            </Principal>
+            <Dependent Role="step_justification">
+              <PropertyRef Name="jid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_justification_ToTable_sid">
+          <End Role="steps" Type="Self.steps" Multiplicity="1" />
+          <End Role="step_justification" Type="Self.step_justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="step_justification">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable_sid">
+          <End Role="steps" Type="Self.steps" Multiplicity="1" />
+          <End Role="project_steps" Type="Self.project_steps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="project_steps">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="vvghadgeDataBaseModelStoreContainer">
+          <EntitySet Name="access" EntityType="Self.access" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comments" EntityType="Self.comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="justification" EntityType="Self.justification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="project" EntityType="Self.project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="project_steps" EntityType="Self.project_steps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="step_comments" EntityType="Self.step_comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="step_justification" EntityType="Self.step_justification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="steps" EntityType="Self.steps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_access_ToTable_pid" Association="Self.FK_access_ToTable_pid">
+            <End Role="project" EntitySet="project" />
+            <End Role="access" EntitySet="access" />
+          </AssociationSet>
+          <AssociationSet Name="FK_access_ToTable_uid" Association="Self.FK_access_ToTable_uid">
+            <End Role="user" EntitySet="user" />
+            <End Role="access" EntitySet="access" />
+          </AssociationSet>
+          <AssociationSet Name="FK_comments_ToTable_uid" Association="Self.FK_comments_ToTable_uid">
+            <End Role="user" EntitySet="user" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_justification_ToTable_uid" Association="Self.FK_justification_ToTable_uid">
+            <End Role="user" EntitySet="user" />
+            <End Role="justification" EntitySet="justification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_project_steps_ToTable_pid" Association="Self.FK_project_steps_ToTable_pid">
+            <End Role="project" EntitySet="project" />
+            <End Role="project_steps" EntitySet="project_steps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_comments_ToTable_cid" Association="Self.FK_step_comments_ToTable_cid">
+            <End Role="comments" EntitySet="comments" />
+            <End Role="step_comments" EntitySet="step_comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_comments_ToTable_sid" Association="Self.FK_step_comments_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="step_comments" EntitySet="step_comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_justification_ToTable_jid" Association="Self.FK_step_justification_ToTable_jid">
+            <End Role="justification" EntitySet="justification" />
+            <End Role="step_justification" EntitySet="step_justification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_justification_ToTable_sid" Association="Self.FK_step_justification_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="step_justification" EntitySet="step_justification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable_sid" Association="Self.FK_Table_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="project_steps" EntitySet="project_steps" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="vvghadgeDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="access">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="project" Relationship="Self.FK_access_ToTable_pid" FromRole="access" ToRole="project" />
+          <NavigationProperty Name="user" Relationship="Self.FK_access_ToTable_uid" FromRole="access" ToRole="user" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="Int32" Nullable="false" />
+          <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="file" Type="Boolean" />
+          <Property Name="fpath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user" Relationship="Self.FK_comments_ToTable_uid" FromRole="comments" ToRole="user" />
+          <NavigationProperty Name="step_comments" Relationship="Self.FK_step_comments_ToTable_cid" FromRole="comments" ToRole="step_comments" />
+        </EntityType>
+        <EntityType Name="justification">
+          <Key>
+            <PropertyRef Name="jid" />
+          </Key>
+          <Property Name="jid" Type="Int32" Nullable="false" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="text_old" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="text_new" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user" Relationship="Self.FK_justification_ToTable_uid" FromRole="justification" ToRole="user" />
+          <NavigationProperty Name="step_justification" Relationship="Self.FK_step_justification_ToTable_jid" FromRole="justification" ToRole="step_justification" />
+        </EntityType>
+        <EntityType Name="project">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="creator_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="creation_time" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="est_doc_ori" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="est_doc_cur" Type="DateTime" Precision="7" />
+          <Property Name="actual_doc" Type="DateTime" Precision="7" />
+          <Property Name="progress" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="accesses" Relationship="Self.FK_access_ToTable_pid" FromRole="project" ToRole="access" />
+          <NavigationProperty Name="project_steps" Relationship="Self.FK_project_steps_ToTable_pid" FromRole="project" ToRole="project_steps" />
+        </EntityType>
+        <EntityType Name="project_steps">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="sid" Type="Int32" Nullable="false" />
+          <Property Name="pid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="project" Relationship="Self.FK_project_steps_ToTable_pid" FromRole="project_steps" ToRole="project" />
+          <NavigationProperty Name="step" Relationship="Self.FK_Table_ToTable_sid" FromRole="project_steps" ToRole="steps" />
+        </EntityType>
+        <EntityType Name="step_comments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="sid" Type="Int32" Nullable="false" />
+          <Property Name="cid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="comment" Relationship="Self.FK_step_comments_ToTable_cid" FromRole="step_comments" ToRole="comments" />
+          <NavigationProperty Name="step" Relationship="Self.FK_step_comments_ToTable_sid" FromRole="step_comments" ToRole="steps" />
+        </EntityType>
+        <EntityType Name="step_justification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="sid" Type="Int32" Nullable="false" />
+          <Property Name="jid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="justification" Relationship="Self.FK_step_justification_ToTable_jid" FromRole="step_justification" ToRole="justification" />
+          <NavigationProperty Name="step" Relationship="Self.FK_step_justification_ToTable_sid" FromRole="step_justification" ToRole="steps" />
+        </EntityType>
+        <EntityType Name="step">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" />
+          <Property Name="step_status" Type="Boolean" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="project_steps" Relationship="Self.FK_Table_ToTable_sid" FromRole="steps" ToRole="project_steps" />
+          <NavigationProperty Name="step_comments" Relationship="Self.FK_step_comments_ToTable_sid" FromRole="steps" ToRole="step_comments" />
+          <NavigationProperty Name="step_justification" Relationship="Self.FK_step_justification_ToTable_sid" FromRole="steps" ToRole="step_justification" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="level" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lld" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="accesses" Relationship="Self.FK_access_ToTable_uid" FromRole="user" ToRole="access" />
+          <NavigationProperty Name="comments" Relationship="Self.FK_comments_ToTable_uid" FromRole="user" ToRole="comments" />
+          <NavigationProperty Name="justifications" Relationship="Self.FK_justification_ToTable_uid" FromRole="user" ToRole="justification" />
+        </EntityType>
+        <Association Name="FK_access_ToTable_pid">
+          <End Role="project" Type="Self.project" Multiplicity="1" />
+          <End Role="access" Type="Self.access" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="pid" />
+            </Principal>
+            <Dependent Role="access">
+              <PropertyRef Name="pid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_access_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="access" Type="Self.access" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="access">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_comments_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comments" Type="Self.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_comments_ToTable_cid">
+          <End Role="comments" Type="Self.comment" Multiplicity="1" />
+          <End Role="step_comments" Type="Self.step_comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="comments">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="step_comments">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_justification_ToTable_uid">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="justification" Type="Self.justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="justification">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_justification_ToTable_jid">
+          <End Role="justification" Type="Self.justification" Multiplicity="1" />
+          <End Role="step_justification" Type="Self.step_justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="justification">
+              <PropertyRef Name="jid" />
+            </Principal>
+            <Dependent Role="step_justification">
+              <PropertyRef Name="jid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_project_steps_ToTable_pid">
+          <End Role="project" Type="Self.project" Multiplicity="1" />
+          <End Role="project_steps" Type="Self.project_steps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="project">
+              <PropertyRef Name="pid" />
+            </Principal>
+            <Dependent Role="project_steps">
+              <PropertyRef Name="pid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable_sid">
+          <End Role="steps" Type="Self.step" Multiplicity="1" />
+          <End Role="project_steps" Type="Self.project_steps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="project_steps">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_comments_ToTable_sid">
+          <End Role="steps" Type="Self.step" Multiplicity="1" />
+          <End Role="step_comments" Type="Self.step_comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="step_comments">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_step_justification_ToTable_sid">
+          <End Role="steps" Type="Self.step" Multiplicity="1" />
+          <End Role="step_justification" Type="Self.step_justification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="steps">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="step_justification">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="vvghadgeDataBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="accesses" EntityType="Self.access" />
+          <EntitySet Name="comments" EntityType="Self.comment" />
+          <EntitySet Name="justifications" EntityType="Self.justification" />
+          <EntitySet Name="projects" EntityType="Self.project" />
+          <EntitySet Name="project_steps" EntityType="Self.project_steps" />
+          <EntitySet Name="step_comments" EntityType="Self.step_comments" />
+          <EntitySet Name="step_justification" EntityType="Self.step_justification" />
+          <EntitySet Name="steps" EntityType="Self.step" />
+          <EntitySet Name="tests" EntityType="Self.test" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <AssociationSet Name="FK_access_ToTable_pid" Association="Self.FK_access_ToTable_pid">
+            <End Role="project" EntitySet="projects" />
+            <End Role="access" EntitySet="accesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_access_ToTable_uid" Association="Self.FK_access_ToTable_uid">
+            <End Role="user" EntitySet="users" />
+            <End Role="access" EntitySet="accesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_comments_ToTable_uid" Association="Self.FK_comments_ToTable_uid">
+            <End Role="user" EntitySet="users" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_comments_ToTable_cid" Association="Self.FK_step_comments_ToTable_cid">
+            <End Role="comments" EntitySet="comments" />
+            <End Role="step_comments" EntitySet="step_comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_justification_ToTable_uid" Association="Self.FK_justification_ToTable_uid">
+            <End Role="user" EntitySet="users" />
+            <End Role="justification" EntitySet="justifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_justification_ToTable_jid" Association="Self.FK_step_justification_ToTable_jid">
+            <End Role="justification" EntitySet="justifications" />
+            <End Role="step_justification" EntitySet="step_justification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_project_steps_ToTable_pid" Association="Self.FK_project_steps_ToTable_pid">
+            <End Role="project" EntitySet="projects" />
+            <End Role="project_steps" EntitySet="project_steps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable_sid" Association="Self.FK_Table_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="project_steps" EntitySet="project_steps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_comments_ToTable_sid" Association="Self.FK_step_comments_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="step_comments" EntitySet="step_comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_step_justification_ToTable_sid" Association="Self.FK_step_justification_ToTable_sid">
+            <End Role="steps" EntitySet="steps" />
+            <End Role="step_justification" EntitySet="step_justification" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="vvghadgeDataBaseModelStoreContainer" CdmEntityContainer="vvghadgeDataBaseEntities">
+          <EntitySetMapping Name="accesses">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.access">
+              <MappingFragment StoreEntitySet="access">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comments">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.comment">
+              <MappingFragment StoreEntitySet="comments">
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="file" ColumnName="file" />
+                <ScalarProperty Name="fpath" ColumnName="fpath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="justifications">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.justification">
+              <MappingFragment StoreEntitySet="justification">
+                <ScalarProperty Name="jid" ColumnName="jid" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="text_old" ColumnName="text_old" />
+                <ScalarProperty Name="text_new" ColumnName="text_new" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="projects">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.project">
+              <MappingFragment StoreEntitySet="project">
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="creator_name" ColumnName="creator_name" />
+                <ScalarProperty Name="creation_time" ColumnName="creation_time" />
+                <ScalarProperty Name="est_doc_ori" ColumnName="est_doc_ori" />
+                <ScalarProperty Name="est_doc_cur" ColumnName="est_doc_cur" />
+                <ScalarProperty Name="actual_doc" ColumnName="actual_doc" />
+                <ScalarProperty Name="progress" ColumnName="progress" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="project_steps">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.project_steps">
+              <MappingFragment StoreEntitySet="project_steps">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="step_comments">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.step_comments">
+              <MappingFragment StoreEntitySet="step_comments">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="cid" ColumnName="cid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="step_justification">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.step_justification">
+              <MappingFragment StoreEntitySet="step_justification">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="jid" ColumnName="jid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="steps">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.step">
+              <MappingFragment StoreEntitySet="steps">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="step_status" ColumnName="step_status" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tests">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.test">
+              <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="vvghadgeDataBaseModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="lld" ColumnName="lld" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

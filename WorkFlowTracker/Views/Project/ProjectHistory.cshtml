@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WorkFlowTracker.Models.ProjectHistory>
+@{
+    ViewBag.Title = "ProjectHistory";
+}
+
+<h2>Project History of @ViewBag.ProjectName</h2>
+
+
+@foreach (var i in Model)
+{
+    <h4>Justifications</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Justifications.First().justification1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Justifications.First().uid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Justifications.First().timestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Justifications.First().status_old)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Justifications.First().status_new)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in i.Justifications)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.justification1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status_old)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status_new)
+            </td>
+        </tr>
+    }
+</table>
+<h4>Comments</h4>
+<table class="table">
+    <tr>
+            <th>
+                @Html.LabelFor(model => i.Comments.First().text)
+            </th>
+            <th>
+                @Html.LabelFor(model => i.Comments.First().uid)
+            </th>
+            <th>
+                @Html.LabelFor(model => i.Comments.First().timestamp)
+            </th>
+            <th>
+                @Html.LabelFor(model => i.Comments.First().isfile)
+            </th>
+            <th>
+                @Html.LabelFor(model => i.Comments.First().fpath)
+            </th>
+
+            <th></th>
+        </tr>
+    
+
+    @foreach (var item in i.Comments)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isfile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fpath)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Delete", "Delete", new { id=item.cid })
+                </td>*@
+        </tr>
+    }
+
+</table>
+}
